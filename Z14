@@ -1,0 +1,55 @@
+#include <stdio.h>
+int main(void) {
+short max = 10;
+int desyat[max];
+int dvoi[max];
+int i = -1;
+int b = 0;
+//краденое
+int bin = 0, k = 1;
+//краденое
+
+for(int n = 0; n<max; ++n){
+		desyat[n]=0;
+		}
+for(int isin = 0;  (a=getchar())!=EOF;){
+		if(a>='0'&&a<='9'){
+			if(isin==0){
+				if(i>=0){
+					desyat[i]=b;
+					b=0;
+					}
+				++i;
+				isin=1;
+				}
+			b=b*10;
+			a=a-'0';
+			b=b+a;
+			}
+		if((a=='\t'||a=='\n'||a==' ')&&isin==1){
+			isin=0;
+			}
+		} 
+if(b!=0)desyat[i]=b;
+
+for(int n = 0; n<max; ++n){
+//краденое
+	num = desyat[n];
+ 	while (num!=0){
+        dvoi[n] = dvoi[n]+((num%2)*k);
+        k = k*10;
+        num = num/2;
+    }
+//краденое
+}
+for(int n = 0; n<max; ++n){
+		printf("%d\t", desyat[n]);
+	}
+
+printf("\n");
+
+for(int n = 0; n<max; ++n){
+		printf("%d\t", dvoi[n]);
+	}
+
+}
